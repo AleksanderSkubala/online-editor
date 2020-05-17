@@ -4,7 +4,10 @@
   "description": "Simple online code editor maked in 10 minutes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run serve\" \"npm run watch\"",
+    "serve": "browser-sync start -s -b -w ./* ",
+    "watch": "watchify index.js -o bundle.js",
+    "build": "browserify index.js -o bundle.js"
   },
   "keywords": [
     "ace",
@@ -12,5 +15,14 @@
     "js"
   ],
   "author": "Aleksander Skubała",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "brace": "^0.11.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "concurrently": "^5.2.0",
+    "watchify": "^3.11.1"
+  }
 }

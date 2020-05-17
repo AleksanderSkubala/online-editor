@@ -1,0 +1,16 @@
+{
+  "name": "online-code-editor",
+  "version": "1.0.0",
+  "description": "Simple online code editor maked in 10 minutes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ace",
+    "brace",
+    "js"
+  ],
+  "author": "Aleksander Skubała",
+  "license": "MIT"
+}
